@@ -15,7 +15,7 @@ npm install -g csv-data-cleaner
 To use `csv-data-cleaner`, run the following command in your terminal:
 
 ```bash
-csv-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionality] [options]
+csv-data-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionality] [options]
 ```
 
 ### Command Options
@@ -36,7 +36,7 @@ csv-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionali
 Here's an example of how to use the tool to clean a CSV file:
 
 ```bash
-csv-cleaner -i uncleaned_data.csv -o cleaned_data.csv -c name,age,email,numericColumn \
+csv-data-cleaner -i uncleaned_data.csv -o cleaned_data.csv -c name,age,email,numericColumn \
             -f removeMissingValues,removeDuplicates,standardizeText,normalizeNumericData,detectOutliers
 ```
 
