@@ -1,6 +1,12 @@
-## csv-data-cleaner
 
-csv-data-cleaner` is a powerful CLI tool for cleaning and preprocessing CSV data files. It supports various data cleaning tasks including handling missing values, standardizing text, normalizing numeric data, and detecting outliers.
+# csv-data-cleaner
+
+`csv-data-cleaner` is a powerful CLI tool for cleaning and preprocessing CSV data files. It supports various data cleaning tasks including handling missing values, standardizing text, normalizing numeric data, and detecting outliers.
+
+## Package Link
+
+You can find the npm package for `csv-data-cleaner` [here](https://www.npmjs.com/package/csv-data-cleaner).
+
 
 ## Installation
 
