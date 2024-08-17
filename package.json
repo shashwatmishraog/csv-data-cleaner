@@ -1,6 +1,6 @@
 {
   "name": "csv-data-cleaner",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "A CLI tool to clean and preprocess CSV data",
   "main": "src/index.js",
   "bin": {

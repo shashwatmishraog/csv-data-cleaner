@@ -1,9 +1,6 @@
-Here's a new README.md incorporating the information you provided:
+## csv-data-cleaner
 
-```markdown
-# csv-data-cleaner
-
-`csv-data-cleaner` is a powerful CLI tool for cleaning and preprocessing CSV data files. It supports various data cleaning tasks including handling missing values, standardizing text, normalizing numeric data, and detecting outliers.
+csv-data-cleaner` is a powerful CLI tool for cleaning and preprocessing CSV data files. It supports various data cleaning tasks including handling missing values, standardizing text, normalizing numeric data, and detecting outliers.
 
 ## Installation
 
@@ -18,7 +15,7 @@ npm install -g csv-data-cleaner
 To use `csv-data-cleaner`, run the following command in your terminal:
 
 ```bash
-csv-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionality] [options]
+csv-data-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionality] [options]
 ```
 
 ### Command Options
@@ -39,7 +36,7 @@ csv-cleaner -i input_file.csv -o output_file.csv -c column_names [-f functionali
 Here's an example of how to use the tool to clean a CSV file:
 
 ```bash
-csv-cleaner -i uncleaned_data.csv -o cleaned_data.csv -c name,age,email,numericColumn \
+csv-data-cleaner -i uncleaned_data.csv -o cleaned_data.csv -c name,age,email,numericColumn \
             -f removeMissingValues,removeDuplicates,standardizeText,normalizeNumericData,detectOutliers
 ```
 
@@ -67,7 +64,7 @@ Removes outliers from numeric data using the Z-score method.
 To contribute to the development of `csv-data-cleaner`, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/csv-data-cleaner.git
+git clone https://github.com/shashwatmishraog/csv-data-cleaner
 cd csv-data-cleaner
 npm install
 ```
@@ -75,10 +72,3 @@ npm install
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
-
-## Support
-
-For issues, questions, or contributions, please open an issue in the [GitHub repository](https://github.com/yourusername/csv-data-cleaner/issues).
-```
-
-This README.md provides a clear overview of the `csv-data-cleaner` tool, including installation instructions, usage details, available functions, and development setup. It's structured to be easy to read and understand, making it simple for users to get started with the tool.

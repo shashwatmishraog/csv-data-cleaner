@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 const { Command } = require('commander');
 const CSVDataCleaner = require('../src/index');
@@ -25,7 +24,7 @@ const columns = options.columns.split(',').map(name => name.trim());
 const cleaner = new CSVDataCleaner(options.input);
 
 cleaner.cleanData(columns).then((data) => {
-  const outputPath = options.output || options.input; // Use input file if no output file is provided
+  const outputPath = options.output || options.input;
   cleaner.writeCSV(data, outputPath);
 }).catch((error) => {
   console.error('Error:', error);

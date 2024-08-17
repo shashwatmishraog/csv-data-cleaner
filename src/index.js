@@ -21,23 +21,12 @@ class CSVDataCleaner {
   async cleanData(columns) {
     try {
       const data = await this.readCSV();
-      console.log('Original Data:', JSON.stringify(data, null, 2)); // Debugging line
 
-      // Apply cleaning functions
       let cleanedData = this.removeRowsWithMissingValues(data, columns);
-      console.log('After Removing Missing Values:', JSON.stringify(cleanedData, null, 2)); // Debugging line
-
       cleanedData = this.removeDuplicates(cleanedData);
-      console.log('After Removing Duplicates:', JSON.stringify(cleanedData, null, 2)); // Debugging line
-
       cleanedData = this.standardizeTextData(cleanedData, columns);
-      console.log('After Standardizing Text:', JSON.stringify(cleanedData, null, 2)); // Debugging line
-
-      cleanedData = this.normalizeNumericData(cleanedData, 'numericColumn'); // Adjust if needed
-      console.log('After Normalizing Numeric Data:', JSON.stringify(cleanedData, null, 2)); // Debugging line
-
-      cleanedData = this.detectAndRemoveOutliers(cleanedData, 'numericColumn'); // Adjust if needed
-      console.log('After Removing Outliers:', JSON.stringify(cleanedData, null, 2)); // Debugging line
+      cleanedData = this.normalizeNumericData(cleanedData, 'numericColumn');
+      cleanedData = this.detectAndRemoveOutliers(cleanedData, 'numericColumn');
 
       return cleanedData;
     } catch (error) {
@@ -72,12 +61,12 @@ class CSVDataCleaner {
 
   normalizeNumericData(data, column) {
     const values = data.map(row => parseFloat(row[column])).filter(value => !isNaN(value));
-    if (values.length === 0) return data; // No numeric data to normalize
+    if (values.length === 0) return data;
 
     const min = Math.min(...values);
     const max = Math.max(...values);
 
-    if (min === max) return data; // No normalization needed if all values are the same
+    if (min === max) return data; 
     
     return data.map(row => {
       const value = parseFloat(row[column]);
@@ -90,7 +79,7 @@ class CSVDataCleaner {
 
   detectAndRemoveOutliers(data, column) {
     const values = data.map(row => parseFloat(row[column])).filter(value => !isNaN(value));
-    if (values.length === 0) return data; // No numeric data to detect outliers
+    if (values.length === 0) return data;
 
     const q1 = this.percentile(values, 25);
     const q3 = this.percentile(values, 75);
@@ -118,8 +107,8 @@ class CSVDataCleaner {
   async writeCSV(data, outputFilePath) {
     try {
       const csv = Papa.unparse(data);
-      fs.writeFileSync(outputFilePath, csv);  // Write to a new file
-      console.log('Data successfully written to', outputFilePath); // Debugging line
+      fs.writeFileSync(outputFilePath, csv);
+      console.log('Data successfully written to', outputFilePath);
     } catch (error) {
       console.error('Error writing data to file:', error);
     }
