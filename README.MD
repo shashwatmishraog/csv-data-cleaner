@@ -1,4 +1,3 @@
-Here's a new README.md incorporating the information you provided:
 
 ```markdown
 # csv-data-cleaner
