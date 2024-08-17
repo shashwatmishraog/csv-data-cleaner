@@ -64,7 +64,7 @@ Removes outliers from numeric data using the Z-score method.
 To contribute to the development of `csv-data-cleaner`, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/csv-data-cleaner.git
+git clone https://github.com/shashwatmishraog/csv-data-cleaner
 cd csv-data-cleaner
 npm install
 ```
@@ -72,10 +72,3 @@ npm install
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
-
-## Support
-
-For issues, questions, or contributions, please open an issue in the [GitHub repository](https://github.com/yourusername/csv-data-cleaner/issues).
-```
-
-This README.md provides a clear overview of the `csv-data-cleaner` tool, including installation instructions, usage details, available functions, and development setup. It's structured to be easy to read and understand, making it simple for users to get started with the tool.
